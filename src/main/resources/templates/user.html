@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <title>User Profile</title>
+</head>
+<body>
+    <div class="container user-profile">
+        <h1 class="title">User Profile</h1>
+        <div class="user-data">
+            <p class="subtitle data-label">User sport:</p>
+            <p class="data-value" th:text="${user.sport}"></p>
+        </div>
+        <br/>
+        <div class="user-data">
+            <p class="subtitle data-label">User drink:</p>
+            <p class="data-value" th:text="${user.drink}"></p>
+        </div>
+         <br/>
+        <form class="logout-form" action="/logout" method="get">
+            <button class="button is-danger" type="submit">Logout</button>
+        </form>
+    </div>
+</body>
+</html>
